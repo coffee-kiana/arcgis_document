@@ -30,6 +30,7 @@ export default {
 
 
 <style scoped>
+/* 3.39版本的地图样式 */
 @import url(https://js.arcgis.com/3.39/esri/css/esri.css);
 .map {
   width: 100%;
