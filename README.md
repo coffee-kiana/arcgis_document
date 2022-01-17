@@ -1,4 +1,5 @@
 ## 给地图添加标记点
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f074890b2cf4c41b73570ebefa852e6~tplv-k3u1fbpfcp-watermark.image?)
 
 ### svg 可单个可多个
 
