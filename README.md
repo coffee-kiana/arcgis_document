@@ -1,5 +1,7 @@
 ## 创建并且创建地图
 
+![微信图片_20220117174657.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93f5f8367b7543f8b2ee650d47d7cb62~tplv-k3u1fbpfcp-watermark.image?)
+
 1. 首先，引入 `esri-loader` 包，如下：
 ```js
 import * as esriLoader from "esri-loader";
