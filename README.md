@@ -1,30 +1,23 @@
-# arcgis_demo
+## 创建并且创建地图
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+1. 首先，引入 `esri-loader` 包，如下：
+```js
+import * as esriLoader from "esri-loader";
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+2. 在 `methods` 里面进行 `arcgis` 的配置:
+```js
+    // url：arcgis 的地图资源，3.39为 arcgis 的版本号
+    const options = {
+        url: "https://js.arcgis.com/3.39/",
+      };
+    
+    // 引入需要的资源文件，需要按照顺序引入，否则可能会报错（根据官网的顺序）
+    esriLoader.loadModules(["esri/map", "dojo/domReady!"], options).then(([Map]) => {
+        this.map = new Map("Map", {
+          basemap: "topo-vector", // arcgis 的地图样式
+          center: [19.82, 41.33], // arcgis 的中心点坐标
+          zoom: 3, // arcgis 的放大标准
+        });
+    });
+```

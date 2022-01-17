@@ -13,6 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "esri-loader": "^3.4.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
