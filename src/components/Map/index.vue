@@ -48,6 +48,8 @@ export default {
               id: "pointLayer",
             });
 
+            let infoTemplate = new InfoTemplate("title", `content`);
+            pointLayer.setInfoTemplate(infoTemplate);
             // 当地图加载完成后，执行 mapLoaded 函数
             this.map.on("load", mapLoaded);
 
@@ -69,7 +71,7 @@ export default {
                       latitude: point[1],
                       longitude: point[0],
                       cache: {
-                        name: index,
+                        index,
                       },
                     }),
                     createSymbol(iconpath, fill_color)
@@ -80,9 +82,8 @@ export default {
               self.map.addLayer(pointLayer, 1);
 
               pointLayer.on("click", function (e) {
-                const {name} = e.graphic.geometry.cache;
-                let infoTemplate =  new InfoTemplate("title", `当前的序号为: ${name}`);
-                pointLayer.setInfoTemplate(infoTemplate)
+                const { index } = e.graphic.geometry.cache;
+                infoTemplate.setContent(`当前的序号为 ${index}`);
               });
             }
 
