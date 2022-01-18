@@ -13,3 +13,5 @@
 
 
 - [给标记点添加弹框](https://github.com/xuan-zai/arcgis_document/tree/%E7%BB%99%E6%A0%87%E8%AE%B0%E7%82%B9%E6%B7%BB%E5%8A%A0%E5%BC%B9%E6%A1%86)
+
+- [对图层的操作](https://github.com/xuan-zai/arcgis_document/tree/%E5%AF%B9%E5%9B%BE%E5%B1%82%E7%9A%84%E6%93%8D%E4%BD%9C)
